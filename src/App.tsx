@@ -1,23 +1,16 @@
 import logo from './assets/logo.svg';
 import styles from './App.module.scss';
+import { Menu } from './components/menu/menu';
+import { Container } from './components/container/container';
+import { Favorite } from './components/favorite/favorite';
+import Classnames from 'classnames';
 
 function App() {
     return (
-        <div className={styles.App}>
-            <header className={styles['App-header']}>
-                <img src={logo} className={styles['App-logo']} alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className={styles['App-link']}
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className={Classnames(styles.App, styles.nav)}>
+            <Menu />
+            <Container />
+            <Favorite />
         </div>
     );
 }

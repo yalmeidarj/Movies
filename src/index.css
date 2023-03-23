@@ -4,6 +4,19 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --background-nav-color: #2c395e;
+  --green-color: #103526;
+  --lighter-green-color: #739a90;
+  --darker-green-color: #425d5e;
+  --bege-color: #c3b59e;
+  --blue-color: #2c395e;
+  --second-blue-color: #537794;
+  --brown-color: #655f57;
+  --darker-brown: #3a3737;
+  --white-color: #f5f5f5;
+  --black-color: #000;
+  --grey-color: grey;
+  --dark-background: #0f0f10;
 }
 
 code {
