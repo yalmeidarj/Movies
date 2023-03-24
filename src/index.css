@@ -17,6 +17,7 @@ body {
   --black-color: #000;
   --grey-color: grey;
   --dark-background: #0f0f10;
+  --alert-color: #bb3333;
 }
 
 code {

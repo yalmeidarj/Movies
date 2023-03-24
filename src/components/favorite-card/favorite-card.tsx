@@ -1,9 +1,9 @@
-import styles from './card.module.scss';
+import styles from './favorite-card.module.scss';
 import classNames from 'classnames';
 import { useContext } from 'react';
 import { FavoriteContext } from '../../context/FavoriteContext';
 
-export interface CardProps {
+export interface FavoriteCardProps {
     className?: string;
     movie: {
         id: number;
@@ -17,21 +17,23 @@ export interface CardProps {
 
 /**
  * This component was created using Codux's Default new component template.
- * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-cards-and-templates
+ * To create custom component templates, see https://help.codux.com/kb/en/article/configuration-for-favorite-cards-and-templates
  */
-export const Card = ({ className, movie }: CardProps) => {
+export const FavoriteCard = ({ className, movie }: FavoriteCardProps) => {
     const { dispatch } = useContext(FavoriteContext);
     return (
         <div className={classNames(styles.root, className)}>
-            <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`} className={styles.cardImg} />
+            <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`} className={styles.favoriteImg} />
+
+            <div
+                className={styles.garbage}
+                onClick={() => dispatch({ type: "REMOVE_FAVORITE", payload: movie })}
+            >
+                <img src={'../src/assets/garbage_bin.png'} className={styles.garbageImg} />
+            </div>
             <div className={styles.detail}>
                 <h1>{movie.title}</h1>
                 <span className={styles.rating}>{movie.vote_average}</span>
-                <p className={styles.description}>{movie.overview.substring(0, 200)}</p>
-                <button
-                    className={styles.cardButton}
-                    onClick={() => dispatch({ type: "ADD_FAVORITE", payload: movie })}
-                >+</button>
             </div>
         </div>
     );

@@ -3,5 +3,8 @@ import { Cards } from '../../../components/cards/cards';
 
 export default createBoard({
     name: 'Cards',
-    Board: () => <Cards />
+    Board: () => <Cards />,
+    environmentProps: {
+        canvasWidth: 1013,
+    },
 });
