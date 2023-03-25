@@ -3,7 +3,7 @@
   height: 350px;
   border: 0px solid black;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 }
 .cardImg {
@@ -20,6 +20,7 @@
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82) 0%, rgba(255, 255, 255, 0) 100%);
   color: #ffffff;
   opacity: 0;
+  padding: 5px;
 }
 .detail:hover {
   opacity: 1;
@@ -29,6 +30,8 @@
 }
 .description {
   font-weight: 300;
+  text-align: justify;
+  line-height: 1.5em;
 }
 .cardButton {
   border-radius: 50%;

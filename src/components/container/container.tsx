@@ -2,6 +2,7 @@ import styles from './container.module.scss';
 import classNames from 'classnames';
 import { Cards } from '../cards/cards';
 import { Search } from '../search/search';
+import { Menu } from '../menu/menu';
 
 export interface ContainerProps {
     className?: string;
@@ -14,6 +15,7 @@ export interface ContainerProps {
 export const Container = ({ className }: ContainerProps) => {
     return (
         <div className={classNames(styles.root, className)}>
+            <Menu />
             <Search />
             <Cards />
         </div>

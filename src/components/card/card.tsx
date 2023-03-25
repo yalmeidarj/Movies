@@ -27,7 +27,7 @@ export const Card = ({ className, movie }: CardProps) => {
             <div className={styles.detail}>
                 <h1>{movie.title}</h1>
                 <span className={styles.rating}>{movie.vote_average}</span>
-                <p className={styles.description}>{movie.overview.substring(0, 200)}</p>
+                <p className={styles.description}>{movie.overview.substring(0, 180)} ...</p>
                 <button
                     className={styles.cardButton}
                     onClick={() => dispatch({ type: "ADD_FAVORITE", payload: movie })}
