@@ -23,15 +23,20 @@ export const Card = ({ className, movie }: CardProps) => {
     const { dispatch } = useContext(FavoriteContext);
     return (
         <div className={classNames(styles.root, className)}>
-            <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`} className={styles.cardImg} />
+            <img
+                className={styles.cardImg}
+                src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            />
             <div className={styles.detail}>
-                <h1>{movie.title}</h1>
+                <h1 className={styles.title}>{movie.title}</h1>
                 <span className={styles.rating}>{movie.vote_average}</span>
                 <p className={styles.description}>{movie.overview.substring(0, 180)} ...</p>
                 <button
                     className={styles.cardButton}
-                    onClick={() => dispatch({ type: "ADD_FAVORITE", payload: movie })}
-                >+</button>
+                    onClick={() => dispatch({ type: 'ADD_FAVORITE', payload: movie })}
+                >
+                    +
+                </button>
             </div>
         </div>
     );

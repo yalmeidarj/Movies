@@ -2,6 +2,7 @@ import styles from './favorite-card.module.scss';
 import classNames from 'classnames';
 import { useContext } from 'react';
 import { FavoriteContext } from '../../context/FavoriteContext';
+import binImg from "../../assets/garbage_bin.png"
 
 export interface FavoriteCardProps {
     className?: string;
@@ -32,7 +33,7 @@ export const FavoriteCard = ({ className, movie }: FavoriteCardProps) => {
                 className={styles.garbage}
                 onClick={() => dispatch({ type: 'REMOVE_FAVORITE', payload: movie })}
             >
-                <img src={'../src/assets/garbage_bin.png'} className={styles.garbageImg} />
+                <img src={binImg} className={styles.garbageImg} />
             </div>
             <div className={styles.detail}>
                 <h1 className={styles.title}>{movie.title}</h1>

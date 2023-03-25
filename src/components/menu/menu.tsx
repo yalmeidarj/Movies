@@ -2,7 +2,7 @@ import styles from './menu.module.scss';
 import classNames from 'classnames';
 import { useContext, useState } from 'react';
 import { SearchContext } from '../../context/SearchContext';
-
+import img from "../../assets/movies.jpg"
 export interface MenuProps {
     className?: string;
 }
@@ -29,6 +29,9 @@ export const Menu = ({ className }: MenuProps) => {
     const [selectedSort, setSelectedSort] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
 
+    // const img = useState('../src/assets/movies-icon.jpg');
+    // const img = require('../src/assets/movies.jpg');
+
     const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedSort(e.target.value);
         dispatch({ type: 'SORT_BY', payload: e.target.value });
@@ -42,7 +45,7 @@ export const Menu = ({ className }: MenuProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.logo}>
-                <img src="../src/assets/movies-icon.jpg" className={styles.logoImage} />
+                <img src={img} className={styles.logoImage} />
                 <span className={styles.logoText}>Yalme Movies</span>
             </div>
             <div className={classNames(styles.dropdown, styles.selector)}>
