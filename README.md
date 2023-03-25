@@ -1,7 +1,5 @@
-    <img height="50"src="./src/assets/codux.svg">
-
 <div align="center">
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](src/assets/screenshot.png?raw=true "Screenshot")
 </div>
 ### Available Scripts
 
@@ -46,7 +44,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### React App template for Codux
+# React App template for Codux
 
 ## A Visual IDE for React Projects
 
