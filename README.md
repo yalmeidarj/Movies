@@ -1,6 +1,8 @@
-<div align="center">
-![Alt text](src/assets/screenshot.png?raw=true "Screenshot")
+<div align="center">  
+    <img height="50"src="https://raw.github.com/yalmeidarj/Movies/main/src/assets/screenshot.png">  
+    <h1></h1>
 </div>
+
 ### Available Scripts
 
 In the project directory, you can run:
